@@ -1,0 +1,33 @@
+# This make file has some specific targets args, time, and
+# the following standard targets:
+# all - build args, time
+# clean - remove products of compilations e.g. executables, .o files ...
+# test - run some executables. Note this is not really testing.
+# submit - create the submission tarfile in the parent directory
+all: args time
+
+args: args0.c
+	gcc args0.c -o args
+
+time: time0.c
+	gcc time0.c -o time -lrt
+
+clean:
+	-rm args time *.o a.out args.out time.out
+
+# Ignore the stuff below this line.
+# We will discuss it in class Wednesday Jan 22.
+submit: clean
+	cd ../..;  tar cvfz Project00.tgz proj00
+	echo "tarfile built in parent directory, now submit it to dropbox.cse.sc.edu"
+
+test: args.out time.out
+
+args.out: args
+	echo testing "./args 10 xbar 100 123 foobar" > args.out
+	./args 10 xbar 100 123 foobar >> args.out
+	cat args.out
+time.out: time
+	echo testing "./time " > time.out
+	./time >> time.out
+	cat  time.out

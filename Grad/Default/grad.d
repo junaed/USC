@@ -1,0 +1,1 @@
+grad.d: ../grad.c

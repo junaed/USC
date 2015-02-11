@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, StethoscopeActivity!</string>
+    <string name="app_name">Stethoscope</string>
+    <string name="s_accelerometer">Start accelerometer</string>
+    <string name="stop_accelerometer">Stop Accelerometer</string>
+    <string name="d_start">Click start...</string>
+    <string name="d_stop">Click stop...</string>
+    <string name="s_mic">Start Microphone</string>
+    <string name="stop_mic">Stop Microphone</string>
+    <string name="empty_string"></string>
+    <string name="start_both">Start both</string>
+    <string name="stop_both">Stop both</string>
+
+</resources>
